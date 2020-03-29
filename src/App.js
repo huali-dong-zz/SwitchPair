@@ -5,7 +5,7 @@ class App extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            names: ["A", "B", "C"]
+            names: ["Yanpei", "Tianzhen", "Wangyan", "Qingqing", "Zhenguang", "Shanil", "Ziye", "Maoning", "Huali"]
         }
     }
     render() {

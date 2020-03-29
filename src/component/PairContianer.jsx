@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PairItem from "./PairItem";
+import PairList from "./PairList";
 
 class PairContainer extends Component {
   constructor(props) {
@@ -42,12 +42,18 @@ class PairContainer extends Component {
   }
   render() {
     return (
-      <div>
-        <button onClick={this.generatePairs.bind(this)}>Generate Pairs</button>
-        {this.state.pairs &&
-          this.state.pairs.map((pair, i) => {
-            return <PairItem key={i} pair={pair} />;
-          })}
+      <div className={"pairContainer"}>
+        <button className={"button"} onClick={this.generatePairs.bind(this)}>
+          Generate Pairs
+        </button>
+        {this.state.pairs.length > 0 ? (
+          <div className={"pairList"}>
+            <h2 className={"pairHeader"}>Pair List:</h2>
+            <PairList pairs={this.state.pairs} />
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     );
   }

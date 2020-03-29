@@ -5,7 +5,7 @@ export default class NameContainer extends Component {
     return (
       <div className={"nameContainer"}>
         <article>
-          <h2 className={"names"}>Name List:</h2>
+          <h2 className={"header"}>Name List:</h2>
           <ul>
             {this.props.names.map((name, i) => (
               <li key={`name-${i}`}>{name}</li>
